@@ -1,6 +1,6 @@
 # Dependent on svn_psh1.sh and git-completion.sh
 
-__git_svn_hg_ps1() {
+__git_svn_ps1() {
     local s=
     local svninfo=`svn info 2> /dev/null`
     local hg=`hg prompt " ({branch}:{rev})" 2> /dev/null`
