@@ -1,2 +1,5 @@
 export CLICOLOR=1;
-. ~/.bashrc
+
+if [ -f ~/.bashrc ]; then
+   source ~/.bashrc
+fi

@@ -11,9 +11,18 @@
     pager = less +G
 
 [alias]
-    llog = log --date=local
-    st = status
+    co = checkout
     ci = commit
+    st = status
+    br = branch
+    ll = shortlog -4
+    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
+    track = remote show origin
+    s = status -s
+    stats = shortlog -sn
+
 
 [svn]
     rmdir = true
@@ -26,3 +35,7 @@
 
 [credential]
     helper = osxkeychain
+[pull]
+    rebase = true
+[rerere]
+    enabled = true

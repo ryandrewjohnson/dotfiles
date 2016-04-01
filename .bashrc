@@ -103,7 +103,17 @@ umask 0002
 
 #export PYTHONPATH=.:..:../lib
 export EDITOR='subl -w'
+#export NODE_PATH=/usr/local/share/npm/bin/
+#export PATH="/usr/local/share/npm/bin:$PATH"
+#export PATH="$PATH:/Users/ryanjohnson/bin"
+#export PATH="/Applications/MAMP/bin/php/php5.4.4/bin:$PATH"
+
+# This loads RVM into a shell session.
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=/usr/local/git/bin:$PATH
 export PATH=$HOME/local/bin:$PATH
+
+# Work around bug in browserify
+ulimit -n 2560
